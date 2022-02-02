@@ -31,6 +31,7 @@ public class main_scanner {
         myNumbers.add(5);
         myNumbers.add(25);
         Collections.sort(myNumbers);
+
         for (int i : myNumbers) {
         System.out.println(i);
         }
@@ -44,12 +45,11 @@ public class main_scanner {
         userName = myObj.nextLine();
         int num = myObj.nextInt();
 
-        System.out.println("Username is: " + userName + "\n");
+        System.out.println("Username is: " + userName);
 
         //listCar();
         number();
-    }
+    } 
 
-    
 
 }

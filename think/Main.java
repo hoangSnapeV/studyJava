@@ -1,6 +1,6 @@
 
 package think;
-import Dog.java;
+//import Dog.java;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,7 +9,11 @@ public class Main {
 
         Dog bill = new Dog("bill", 22);
         bill.speak();
+        
     }
+
 }
+
+
 
 
