@@ -7,7 +7,9 @@ public interface IStackQueue {
     public boolean isFull();
     public boolean isEmpty();
 
+    public void show();
 }
+
 /* 
 push : add a implement SnQ
 pop: get a implement SnQ
