@@ -63,6 +63,35 @@ public class MyLinkedList {
         return headNode;
     }
 
+    public static Node addToIndex(Node headNode, int value, int index) {
+        
+        if (index == 0) {
+            return addToHead(headNode, value);
+        } else {
+            //B1. Tim vi tri can them 
+            Node curNode = headNode;
+            int count = 0;
+            Node newNode = new Node(value);
+            
+            while (curNode != null) {
+                count++;
+
+                if (count == index) {
+                    // thuc hien add 
+                    newNode.next = curNode.next;
+                    curNode.next = newNode;
+
+                    break;
+                }
+
+                curNode = curNode.next;
+            }
+        }
+
+
+        return headNode;
+    }
+
     public static void main(String[] args) {
         Node n1 = new Node(1);
         Node n2 = new Node(2);
@@ -74,8 +103,17 @@ public class MyLinkedList {
         printLinkedList(n1);
         
         //Node newList =  addToHead(n1, 0);
-        n1 =  addToHead(n1, 0);
-        n1 = addToTail(n1, 4);
+        // n1 =  addToHead(n1, 0);
+        // n1 = addToTail(n1, 4);
+        // printLinkedList(n1);
+
+        n1 = addToIndex(n1, 0, 0);
         printLinkedList(n1);
+
+        n1 = addToIndex(n1, 4, 4);
+        printLinkedList(n1);
+
+
+        
     }
 }
